@@ -75,7 +75,7 @@ window.onload = function() {
   // Pause button event
   pauseBtn.addEventListener('click', togglePause);
 
-  // Function to end the game
+  // Function to end the game :O
   function endGame() {
     gameEnded = true;
     clearInterval(timerInterval);
