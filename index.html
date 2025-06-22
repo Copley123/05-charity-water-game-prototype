@@ -7,7 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
+    <!-- Header with game title and instructions -->
+    <header>
+        <h1>WATERCATCHER!</h1>
+        <p>Catch the water drops! Avoid pollutants!</p>
+    </header>
+    <!-- Top bar with settings, score, and timer -->
+    <div id="top-bar">
+        <div id="top-left">
+            <button id="restart-btn">🔄</button>
+        </div>
+        <div id="top-center">
+            <span id="score">Score: 0</span><br>
+            <span id="timer">Time: 00</span>
+        </div>
+        <div id="top-right">
+            <button id="pause-btn">⏸️</button>
+        </div>
+    </div>
+    <!-- Game area (sky, clouds, drops, bucket) -->
+    <main>
+        <div id="game-area">
+            <!-- Clouds -->
+            <div class="cloud" id="cloud1"></div>
+            <div class="cloud" id="cloud2"></div>
+            <div class="cloud" id="cloud3"></div>
+            <!-- Drops will be added dynamically with JavaScript -->
+            <!-- Bucket -->
+            <div id="bucket"></div>
+            <!-- Green ground at the bottom of the game area -->
+            <div id="ground"></div>
+        </div>
+    </main>
+    <!-- Message overlays (hidden by default) -->
+    <div id="message-overlay" style="display:none;"></div>
+    <!-- Countdown overlay (hidden by default) -->
+    <div id="countdown-overlay" style="display:none;"></div>
+    <!-- Arrow controls for mobile fixed at the bottom above the footer -->
+    <div id="controls">
+        <button id="left-arrow" style="float:left;">⬅️</button>
+        <button id="right-arrow" style="float:right;">➡️</button>
+        <div style="clear:both;"></div>
+    </div>
+    <!-- Charity: water credit at the very bottom -->
+    <footer>
+        <small>© charity: water</small>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

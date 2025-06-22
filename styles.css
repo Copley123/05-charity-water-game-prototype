@@ -13,3 +13,133 @@ Secondary Colors:
 - Pink:       #F16061
 
 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #2E9DF7; /* Blue sky */
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: #2E9DF7; /* Blue sky */
+  overflow: hidden;
+}
+
+/* Green ground at the bottom of the game area */
+#ground {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
+  background: #4FCB53; /* Green */
+  z-index: 1;
+}
+
+/* Make sure the bucket sits on the ground */
+#bucket {
+  position: absolute;
+  bottom: 60px; /* sits on the ground */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 40px;
+  background: #886c07;
+  border-radius: 0 0 30px 30px;
+  border: 2px solid #272b0b;
+  z-index: 3;
+}
+
+/* Clouds at the top of the game area */
+.cloud {
+  position: absolute;
+  top: 10px;
+  width: 80px;
+  height: 40px;
+  background: #fff;
+  border-radius: 40px 40px 40px 40px / 30px 30px 30px 30px;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+#cloud1 {
+  left: 10%;
+}
+#cloud2 {
+  left: 40%;
+}
+#cloud3 {
+  left: 70%;
+}
+
+#left-arrow, #right-arrow {
+  font-size: 2.5rem;
+  padding: 16px 28px;
+  border-radius: 50%;
+  border: none;
+  background: #3eb9e6;
+  color: #222;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+#left-arrow:active, #right-arrow:active {
+  background: #FF902A;
+}
+
+#controls {
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+  width: 100vw;
+  z-index: 2;
+  background: transparent;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 3;
+  background: transparent;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.pink-sky, body.pink-sky, #game-area.pink-sky {
+  background: #F160C1 !important; /* Pink sky for both body and game area */
+}
+
+.purple-ground {
+  background: #8B5CF6 !important; /* Purple ground */
+}
+
+#message-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  pointer-events: none; /* Allow clicks to pass through overlay */
+}
+
+#restart-btn {
+  pointer-events: auto; /* Allow clicking the restart button even if overlay is up */
+}
