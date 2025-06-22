@@ -143,3 +143,20 @@ footer {
 #restart-btn {
   pointer-events: auto; /* Allow clicking the restart button even if overlay is up */
 }
+
+#top-bar {
+  display: flex;
+  justify-content: space-between; /* pushes left and right to edges */
+  align-items: center;
+  padding: 8px 16px;
+}
+
+#top-left, #top-right {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between items in each group */
+}
+
+header {
+  text-align: center;
+}
